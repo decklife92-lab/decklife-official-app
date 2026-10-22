@@ -2,42 +2,65 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masukkan Kunci - Decklife</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kunci Akses</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{min-height:100vh;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('/endorse/bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:#fff;width:100%;max-width:380px;padding:32px 28px;border-radius:24px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.title{font-size:22px;font-weight:800;margin-bottom:6px}
-.desc{font-size:13px;color:#666;margin-bottom:20px}
-.input{width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;font-size:16px;text-align:center;letter-spacing:6px;font-weight:700;outline:none}
-.input:focus{border-color:#111}
-.btn{width:100%;padding:14px;border-radius:12px;border:none;background:#111;color:#fff;font-weight:700;font-size:15px;margin-top:14px;cursor:pointer}
-.btn:active{transform:scale(.97)}
-.error{color:red;font-size:12px;margin-top:10px;display:none}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{min-height:100vh;background:url('./bg.jpg') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:rgba(0,0,0,0.45);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.18);border-radius:28px;padding:32px 24px;width:100%;max-width:380px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+h2{color:#fff;font-size:22px;font-weight:800;margin-bottom:8px}
+p{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:20px}
+input{width:100%;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#fff;font-size:18px;text-align:center;letter-spacing:4px;margin-bottom:14px;outline:none}
+button{width:100%;padding:16px;border:none;border-radius:12px;background:#fff;color:#000;font-weight:800;font-size:16px;cursor:pointer}
+.error{color:#ff6b6b;font-size:13px;margin-top:10px;display:none}
+.back{color:rgba(255,255,255,0.6);font-size:13px;margin-top:14px;display:block;text-decoration:none}
 </style>
 </head>
 <body>
 <div class="card">
-<div class="title">Masukkan Kunci</div>
-<div class="desc">Hubungi @Decklife92 untuk kunci akses Whatsapp</div>
-<input type="password" id="kunci" class="input" placeholder="****" maxlength="4" inputmode="numeric">
-<button class="btn" onclick="cekKunci()">Buka Whatsapp</button>
-<div class="error" id="error">Kunci salah! Hubungi admin.</div>
+<h2 id="title">🔒 Masukkan Kunci</h2>
+<p id="desc">Untuk chat Whatsapp</p>
+<input type="tel" id="kunci" placeholder="5795" maxlength="4">
+<button onclick="cek()">BUKA SEKARANG</button>
+<div class="error" id="err">Kunci salah! Hubungi @decklife</div>
+<a href="./index.html" class="back">← Kembali</a>
 </div>
+
 <script>
-function cekKunci(){
- var k=document.getElementById('kunci').value;
- var e=document.getElementById('error');
- if(k==='5795'){
-   window.location.href='https://wa.me/628125443555?text=Halo%20kak%20Decklife%20mau%20endorse';
- }else{
-   e.style.display='block';
-   setTimeout(()=>{e.style.display='none'},2000);
- }
+const params = new URLSearchParams(window.location.search);
+const to = params.get('to') || 'wa';
+
+const titles = {
+  wa: 'Untuk chat Whatsapp',
+  ig: 'Untuk DM Instagram',
+  fb: 'Untuk DM Facebook',
+  tiktok: 'Untuk DM TikTok',
+  gmail: 'Untuk Kirim Gmail'
+};
+document.getElementById('desc').innerText = titles[to] || titles['wa'];
+document.getElementById('title').innerText = '🔒 Akses ' + to.toUpperCase();
+
+function cek(){
+  const k = document.getElementById('kunci').value;
+  if(k === '5795'){
+    if(to === 'wa'){
+      window.location.href='https://wa.me/6285246199633?text=Halo%20Decklife%20mau%20endorse';
+    } else if(to === 'ig'){
+      window.location.href='instagram://user?username=decklife92';
+      setTimeout(()=>{ window.location.href='https://www.instagram.com/decklife92'; },800);
+    } else if(to === 'fb'){
+      window.location.href='fb://facewebmodal/f?href=https://www.facebook.com/share/16o1r3b5QW/';
+      setTimeout(()=>{ window.location.href='https://www.facebook.com/share/16o1r3b5QW/'; },800);
+    } else if(to === 'tiktok'){
+      window.location.href='snssdk1233://user/profile/decklife92';
+      setTimeout(()=>{ window.location.href='https://www.tiktok.com/@decklife92'; },800);
+    } else if(to === 'gmail'){
+      window.location.href='mailto:decklife92@gmail.com?subject=Endorse%20Decklife';
+    }
+  } else {
+    document.getElementById('err').style.display='block';
+  }
 }
-document.getElementById('kunci').addEventListener('keypress',function(ev){if(ev.key==='Enter'){cekKunci()}});
 </script>
 </body>
 </html>
