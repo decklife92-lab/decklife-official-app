@@ -7,85 +7,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{min-height:100vh;background:url('bg.jpg') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center;padding:18px}
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.25);z-index:1}
-.card{position:relative;z-index:2;background:#fff;border-radius:28px;padding:28px 22px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center}
-.username{font-size:32px;font-weight:800;color:#111}
-.subtitle{font-size:14px;color:#666;line-height:1.4;margin:4px 0 14px}
-.badge{display:inline-block;background:#111;color:#fff;font-size:11px;font-weight:700;padding:8px 18px;border-radius:20px;margin-bottom:22px}
+body{min-height:100vh;background:url('bg.jpg') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;width:100%;max-width:380px;border-radius:32px;padding:28px 20px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.avatar{width:120px;height:120px;border-radius:50%;border:5px solid #fff;box-shadow:0 6px 20px rgba(0,0,0,.25);object-fit:cover;margin:0 auto 16px;display:block}
+.username{font-size:36px;font-weight:800;color:#111;line-height:1}
+.subtitle{font-size:14px;color:#666;margin:8px 0 20px}
 .links{display:flex;flex-direction:column;gap:12px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;border-radius:14px;font-size:15px;font-weight:600;text-decoration:none;transition:.2s;border:none;cursor:pointer}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;border-radius:14px;font-size:16px;font-weight:600;border:none;cursor:pointer;text-decoration:none;transition:.2s}
 .btn-black{background:#111;color:#fff}
 .btn-white{background:#fff;color:#111;border:1.5px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .btn:active{transform:scale(.97)}
-.icon{width:24px;height:24px;flex-shrink:0}
-.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:12px 20px;border-radius:30px;font-size:13px;font-weight:600;z-index:99;display:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.icon{width:26px;height:26px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:12px 22px;border-radius:30px;font-size:13px;font-weight:600;display:none;z-index:99}
 </style>
 </head>
 <body>
 <div class="card">
-<img class="avatar" src="bg.jpg" alt="decklife">
+<img class="avatar" src="bg.jpg" alt="@decklife">
 <div class="username">@decklife</div>
 <div class="subtitle">Kreator Visual Sunset & Sunrise</div>
 <div class="links">
+<button class="btn btn-black" onclick="copyAndOpen('@Decklife92 Kunci: 5795','https://wa.me/6281385947462?text=Halo%20Kak%20Decklife92%20Kunci%205795%20mau%20endorse','WA disalin!')">
+<svg class="icon" viewBox="0 0 24 24" fill="#25D366"><path d="M19.05 4.94A9.9 9.9 0 0 0 12.03 2C6.52 2 2.03 6.49 2.03 11.99c0 1.76.46 3.48 1.34 5L2 22l5.17-1.36a9.87 9.87 0 0 0 4.86 1.24h.01c5.5 0 9.99-4.49 9.99-9.99a9.91 9.91 0 0 0-2.98-7.05zm-7.02 15.45h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.07.81.82-2.99-.19-.31A8.28 8.28 0 0 1 3.73 12c0-4.59 3.74-8.33 8.33-8.33a8.3 8.3 0 0 1 5.9 2.45 8.26 8.26 0 0 1 2.43 5.89c0 4.6-3.73 8.33-8.34 8.33zm4.57-6.24c-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.57.12-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.24-.75-.67-1.26-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.3.37-.45.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.49c-.17 0-.44.06-.67.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.6.12.17 1.77 2.71 4.29 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.61 1.69-1.19.21-.59.21-1.09.15-1.19-.06-.11-.23-.17-.48-.3z"/></svg>
+Whatsapp</button>
 
-<!-- 1. WHATSAPP - DATA RAJA @Decklife92 Kunci 5795 -->
-<button class="btn btn-black" onclick="copyAndOpen('@Decklife92 Kunci: 5795','https://wa.me/6281254435553?text=Halo%20Kak%20Decklife92%20mau%20endorse','WA disalin!')">
-<svg class="icon" viewBox="0 0 24 24" fill="#25D366"><path d="M19.05 4.94A9.91 9.91 0 0 0 12.04 2C6.52 2 2.04 6.48 2.04 12a9.85 9.85 0 0 0 1.3 4.93L2 22l5.25-1.38A9.91 9.91 0 0 0 12.04 22c5.52 0 10-4.48 10-10a9.91 9.91 0 0 0-2.99-7.06zM12.04 20.02a7.94 7.94 0 0 1-4.05-1.11l-.29-.17-3.12.82.83-3.04-.19-.31A7.93 7.93 0 0 1 4.04 12c0-4.39 3.57-7.96 7.96-7.96a7.93 7.93 0 0 1 5.64 2.34 7.93 7.93 0 0 1 2.34 5.64c0 4.39-3.57 7.96-7.94 8zM17.07 14.32c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-Whatsapp
-</button>
-
-<!-- 2. GMAIL - FIX SALIN + BUKA GMAIL -->
 <button class="btn btn-white" onclick="copyGmail()">
-<svg class="icon" viewBox="0 0 24 24"><path fill="#EA4335" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-Gmail
-</button>
+<svg class="icon" viewBox="0 0 24 24" fill="#EA4335"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+Gmail</button>
 
-<!-- 3. TIK TOK -->
-<button class="btn btn-white" onclick="copyAndOpen('@_decklife_','https://www.tiktok.com/@_decklife_','Username TikTok disalin!')">
-<svg class="icon" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52V6.84a4.83 4.83 0 0 1-1.04-.15z"/></svg>
-Tik Tok
-</button>
+<button class="btn btn-white" onclick="copyAndOpen('@_decklife_','https://www.tiktok.com/@_decklife_','TikTok disalin!')">
+<svg class="icon" viewBox="0 0 24 24" fill="#111"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-1.77V16.5a4.5 4.5 0 1 1-4.5-4.5h.5V14a2.5 2.5 0 1 0 2.5 2.5V2h2a4.82 4.82 0 0 0 3.27 4.69z"/></svg>
+Tik Tok</button>
 
-<!-- 4. INSTAGRAM - LINK ASLI RAJA -->
-<button class="btn btn-white" onclick="copyAndOpen('https://www.instagram.com/opy_j?srtk=ZDZ5c2dkaGttZXY5','https://www.instagram.com/opy_j?srtk=ZDZ5c2dkaGttZXY5','Link IG disalin!')">
-<svg class="icon" viewBox="0 0 24 24"><path fill="#E1306C" d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.16 15.58 2.15 15.2 2.15 12s.01-3.58.07-4.85C2.37 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.23.23 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.16 4.35 2.62 6.81 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.16 6.81-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.16-4.35-2.62-6.81-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 6.16 6.16A6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.9a1.44 1.44 0 1 0 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
-Instagram
-</button>
+<button class="btn btn-white" onclick="copyAndOpen('https://www.instagram.com/opy_j?srtk=ZDZ5c2dkaGttZXY5','https://www.instagram.com/opy_j?srtk=ZDZ5c2dkaGttZXY5','IG disalin!')">
+<svg class="icon" viewBox="0 0 24 24"><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#feda75"/><stop offset="50%" stop-color="#d62976"/><stop offset="100%" stop-color="#4f5bd5"/></linearGradient><path fill="url(#g)" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+Instagram</button>
 
-<!-- 5. FACEBOOK - LINK ASLI RAJA -->
-<button class="btn btn-white" onclick="copyAndOpen('https://www.facebook.com/share/1cwja4Ee61/','https://www.facebook.com/share/1cwja4Ee61/','Link Facebook disalin!')">
-<svg class="icon" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.12 24v-8.44H7.08v-3.49h3.04V9.41c0-3 1.79-4.66 4.52-4.66 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.95.92-1.95 1.87v2.25h3.32l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
-Facebook
-</button>
-
+<button class="btn btn-white" onclick="copyAndOpen('https://www.facebook.com/share/1cwja4Ee61/','https://www.facebook.com/share/1cwja4Ee61/','FB disalin!')">
+<svg class="icon" viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33V21.88C18.34 21.13 22 16.99 22 12z"/></svg>
+Facebook</button>
 </div>
 </div>
 <div class="toast" id="toast"></div>
 <script>
-function copyAndOpen(text, link, msg){
-  navigator.clipboard.writeText(text).then(()=>{
-    showToast(msg);
-    setTimeout(()=>{ window.open(link,'_blank'); }, 500);
-  }).catch(()=>{
-    showToast(msg);
-    window.open(link,'_blank');
-  });
-}
-function copyGmail(){
-  var email='decklife92@gmail.com';
-  navigator.clipboard.writeText(email).then(()=>{
-    showToast('Gmail disalin! Membuka Gmail...');
-    setTimeout(()=>{
-      window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+email+'&su=Tanya%20Endorse%20Decklife','_blank');
-    }, 400);
-  });
-}
-function showToast(t){
-  var el=document.getElementById('toast');
-  el.innerText=t; el.style.display='block';
-  setTimeout(()=>{el.style.display='none'},2500);
-}
+function copyAndOpen(t,l,m){navigator.clipboard.writeText(t).then(()=>{showToast(m);setTimeout(()=>{window.open(l,'_blank');},400);});}
+function copyGmail(){var e='decklife92@gmail.com';navigator.clipboard.writeText(e).then(()=>{showToast('Gmail disalin!');setTimeout(()=>{window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+e+'&su=Tanya%20Endorse%20Decklife','_blank');},400);});}
+function showToast(t){var el=document.getElementById('toast');el.innerText=t;el.style.display='block';setTimeout(()=>{el.style.display='none'},2500);}
 </script>
 </body>
 </html>
