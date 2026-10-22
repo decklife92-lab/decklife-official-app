@@ -7,11 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{min-height:100vh;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
+body{min-height:100vh;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('/endorse/bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
 .card{background:#fff;width:100%;max-width:380px;padding:32px 28px;border-radius:24px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 .title{font-size:22px;font-weight:800;margin-bottom:6px}
 .desc{font-size:13px;color:#666;margin-bottom:20px}
-.input{width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;font-size:16px;text-align:center;letter-spacing:4px;font-weight:700;outline:none}
+.input{width:100%;padding:14px;border-radius:12px;border:1.5px solid #ddd;font-size:16px;text-align:center;letter-spacing:6px;font-weight:700;outline:none}
 .input:focus{border-color:#111}
 .btn{width:100%;padding:14px;border-radius:12px;border:none;background:#111;color:#fff;font-weight:700;font-size:15px;margin-top:14px;cursor:pointer}
 .btn:active{transform:scale(.97)}
@@ -21,8 +21,8 @@ body{min-height:100vh;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
 <body>
 <div class="card">
 <div class="title">Masukkan Kunci</div>
-<div class="desc">Hubungi @Decklife92 untuk mendapatkan kunci akses Whatsapp</div>
-<img src="/endorse/avatar.jpg" class="avatar" alt="decklife">
+<div class="desc">Hubungi @Decklife92 untuk kunci akses Whatsapp</div>
+<input type="password" id="kunci" class="input" placeholder="****" maxlength="4" inputmode="numeric">
 <button class="btn" onclick="cekKunci()">Buka Whatsapp</button>
 <div class="error" id="error">Kunci salah! Hubungi admin.</div>
 </div>
@@ -37,7 +37,7 @@ function cekKunci(){
    setTimeout(()=>{e.style.display='none'},2000);
  }
 }
-document.getElementById('kunci').addEventListener('keypress',function(e){if(e.key==='Enter'){cekKunci()}});
+document.getElementById('kunci').addEventListener('keypress',function(ev){if(ev.key==='Enter'){cekKunci()}});
 </script>
 </body>
 </html>
