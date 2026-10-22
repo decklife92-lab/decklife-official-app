@@ -2,36 +2,35 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@decklife - Link</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@decklife</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{min-height:100vh;background:url('bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:#fff;width:100%;max-width:380px;padding:32px 24px;border-radius:32px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.3)}
-.avatar{width:110px;height:110px;border-radius:50%;margin:0 auto 16px;display:block;object-fit:cover;border:4px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.username{font-size:32px;font-weight:800;color:#111;line-height:1.1}
-.subtitle{font-size:14px;color:#777;margin:8px 0 22px}
-.links{display:flex;flex-direction:column;gap:14px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;border-radius:16px;border:none;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:.15s}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{min-height:100vh;background:url('/endorse/bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;border-radius:28px;padding:32px 24px;width:100%;max-width:380px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;box-shadow:0 8px 20px rgba(0,0,0,.2);border:4px solid #fff}
+h1{font-size:32px;font-weight:900;margin-bottom:6px}
+.sub{color:#777;font-size:14px;margin-bottom:24px}
+.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px;transition:.2s;color:#fff}
 .btn:active{transform:scale(.97)}
-.btn-black{background:#111;color:#fff}
-.btn-white{background:#fff;color:#111;border:1.5px solid #eee}
-.icon{width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:22px}
+.wa{background:#111}
+.gmail{background:#EA4335}
+.tiktok{background:#000000}
+.ig{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}
+.fb{background:#1877F2}
 </style>
 </head>
 <body>
 <div class="card">
-<img src="avatar.jpg" class="avatar" alt="decklife">
-<div class="username">@decklife</div>
-<div class="subtitle">Kreator Visual Sunset & Sunrise</div>
-<div class="links">
-<button class="btn btn-black" onclick="window.open('/endorse/kunci.html','_blank')"><span class="icon">🟢</span> Whatsapp</button>
-<a class="btn btn-white" href="mailto:decklife92@gmail.com"><span class="icon">✉️</span> Gmail</a>
-<a class="btn btn-white" href="https://www.tiktok.com/@decklife92" target="_blank"><span class="icon">🎵</span> Tik Tok</a>
-<a class="btn btn-white" href="https://www.instagram.com/decklife92/" target="_blank"><span class="icon">📷</span> Instagram</a>
-<a class="btn btn-white" href="https://www.facebook.com/decklife92/" target="_blank"><span class="icon">f</span> Facebook</a>
-</div>
+<img src="/endorse/avatar.jpg" class="avatar" onerror="this.style.display='none'">
+<h1>@decklife</h1>
+<div class="sub">Kreator Visual Sunset & Sunrise</div>
+
+<button class="btn wa" onclick="window.open('/endorse/kunci.html','_blank')">🟢 Whatsapp</button>
+<button class="btn gmail" onclick="window.open('mailto:decklife92@gmail.com','_blank')">✉️ Gmail</button>
+<button class="btn tiktok" onclick="window.open('https://www.tiktok.com/@decklife92','_blank')">🎵 Tik Tok</button>
+<button class="btn ig" onclick="window.open('https://www.instagram.com/decklife92','_blank')">📷 Instagram</button>
+<button class="btn fb" onclick="window.open('https://www.facebook.com/share/16o1r3b5QW/','_blank')">f Facebook</button>
 </div>
 </body>
 </html>
