@@ -2,35 +2,79 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>@decklife</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@decklife - Endorse</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-body{min-height:100vh;background:url('./bg.jpg') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:rgba(0,0,0,0.42);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.18);border-radius:28px;padding:32px 24px;width:100%;max-width:380px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4)}
-.avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;border:3px solid rgba(255,255,255,0.8);box-shadow:0 8px 20px rgba(0,0,0,.3)}
-h1{font-size:32px;font-weight:900;color:#fff;margin-bottom:6px}
-.sub{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:24px}
-.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px;transition:.2s;color:#fff}
-.btn:active{transform:scale(.97)}
-.wa{background:#111;border:1px solid rgba(255,255,255,0.15)}
-.gmail{background:#EA4335}
-.tiktok{background:#000;border:1px solid #222}
-.ig{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}
-.fb{background:#1877F2}
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', sans-serif;}
+body{
+  min-height:100vh;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+.card{
+  width:100%; max-width:380px;
+  background: rgba(30,20,10,0.55);
+  backdrop-filter: blur(18px);
+  border-radius:28px;
+  padding:28px 22px 30px;
+  border:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+}
+.avatar-wrap{width:110px;height:110px;margin:0 auto 14px;background:#fff;border-radius:50%;padding:5px;}
+.avatar-wrap img{width:100%;height:100%;border-radius:50%;object-fit:cover;}
+h1{color:#fff;font-size:38px;font-weight:800;margin-bottom:2px;}
+p.sub{color:rgba(255,255,255,0.75);font-size:14px;margin-bottom:22px;}
+.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:16px;font-weight:600;color:#fff;cursor:pointer;margin-bottom:12px;display:flex;justify-content:center;align-items:center;gap:8px;}
+.btn-whatsapp{background:#1a1a1a;}
+.btn-gmail{background:#ff3b30;}
+.btn-tiktok{background:#000000; border:1px solid #333;}
+.btn-instagram{background: linear-gradient(90deg,#f99d2e,#e94057,#c13584);}
+.btn-facebook{background:#1877f2;}
+.dot{width:18px;height:18px;background:#2ecc71;border-radius:50%;display:inline-block;}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:12px 20px;border-radius:30px;font-size:14px;display:none;z-index:99;}
 </style>
 </head>
 <body>
 <div class="card">
-<img src="./avatar.jpg" class="avatar">
-<h1>@decklife</h1>
-<div class="sub">Kreator Visual Sunset & Sunrise</div>
-
-<button class="btn wa" onclick="location.href='./kunci.html?to=wa'">🟢 Whatsapp</button>
-<button class="btn gmail" onclick="location.href='./kunci.html?to=gmail'">✉️ Gmail</button>
-<button class="btn tiktok" onclick="location.href='./kunci.html?to=tiktok'">🎵 Tik Tok</button>
-<button class="btn ig" onclick="location.href='./kunci.html?to=ig'">📷 Instagram</button>
-<button class="btn fb" onclick="location.href='./kunci.html?to=fb'">f Facebook</button>
+  <div class="avatar-wrap"><img src="avatar.jpg" alt="decklife"></div>
+  <h1>@decklife</h1>
+  <p class="sub">Kreator Visual Sunset & Sunrise</p>
+  <button class="btn btn-whatsapp" onclick="goLocked('whatsapp')"><span class="dot"></span> Whatsapp</button>
+  <button class="btn btn-gmail" onclick="goLocked('gmail')">✉️ Gmail</button>
+  <button class="btn btn-tiktok" onclick="goTikTok()">🎵 Tik Tok</button>
+  <button class="btn btn-instagram" onclick="goLocked('instagram')">📷 Instagram</button>
+  <button class="btn btn-facebook" onclick="goLocked('facebook')">f Facebook</button>
 </div>
+<div id="toast" class="toast"></div>
+<script>
+const LINKS = {
+  gmail: "mailto:decklife92@gmail.com",
+  tiktok_username: "@_decklife_",
+  tiktok_url: "https://www.tiktok.com/@_decklife_",
+  instagram: "https://www.instagram.com/opy_j?exln=ZDZ5c2dkaGttZXY5",
+  facebook: "https://www.facebook.com/share/1BLASZfm8Q/"
+};
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.innerText=msg; t.style.display='block';
+  setTimeout(()=>t.style.display='none',3000);
+}
+function goLocked(type){
+  sessionStorage.setItem('decklife_target', type);
+  window.location.href = 'kunci.html';
+}
+function goTikTok(){
+  const username = LINKS.tiktok_username;
+  const url = LINKS.tiktok_url;
+  if(navigator.clipboard){navigator.clipboard.writeText(username).catch(()=>{});}
+  showToast('Username disalin: ' + username + ' - Membuka TikTok...');
+  setTimeout(()=>{window.location.href = 'snssdk1233://user/profile/' + username.replace('@','');},200);
+  setTimeout(()=>{window.open(url, '_blank');},800);
+}
+</script>
 </body>
 </html>
