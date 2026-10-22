@@ -6,27 +6,52 @@
 <title>@decklife</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-body{min-height:100vh;background:url('/endorse/bg.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:#fff;border-radius:28px;padding:32px 24px;width:100%;max-width:380px;text-align:center;box-shadow:0 20px 40px rgba(0,0,0,.25)}
-.avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 16px;display:block;box-shadow:0 8px 20px rgba(0,0,0,.2);border:4px solid #fff}
-h1{font-size:32px;font-weight:900;margin-bottom:6px}
-.sub{color:#777;font-size:14px;margin-bottom:24px}
-.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:10px;transition:.2s;color:#fff}
+body{
+  min-height:100vh;
+  background:url('./bg.jpg') center/cover no-repeat fixed;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+}
+.card{
+  background:rgba(0,0,0,0.42);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:28px;
+  padding:32px 24px;
+  width:100%;max-width:380px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.4)
+}
+.avatar{
+  width:110px;height:110px;border-radius:50%;
+  object-fit:cover;margin:0 auto 16px;display:block;
+  border:3px solid rgba(255,255,255,0.8);
+  box-shadow:0 8px 20px rgba(0,0,0,.3)
+}
+h1{font-size:32px;font-weight:900;color:#fff;margin-bottom:6px}
+.sub{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:24px}
+.btn{
+  width:100%;padding:16px;border:none;border-radius:14px;
+  font-size:15px;font-weight:700;cursor:pointer;
+  margin-bottom:12px;display:flex;align-items:center;
+  justify-content:center;gap:10px;transition:.2s;color:#fff
+}
 .btn:active{transform:scale(.97)}
-.wa{background:#111}
+.wa{background:#111;border:1px solid rgba(255,255,255,0.15)}
 .gmail{background:#EA4335}
-.tiktok{background:#000000}
+.tiktok{background:#000000;border:1px solid #222}
 .ig{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}
 .fb{background:#1877F2}
 </style>
 </head>
 <body>
 <div class="card">
-<img src="/endorse/avatar.jpg" class="avatar" onerror="this.style.display='none'">
+<img src="./avatar.jpg" class="avatar">
 <h1>@decklife</h1>
 <div class="sub">Kreator Visual Sunset & Sunrise</div>
 
-<button class="btn wa" onclick="window.open('/endorse/kunci.html','_blank')">🟢 Whatsapp</button>
+<button class="btn wa" onclick="location.href='./kunci.html'">🟢 Whatsapp</button>
 <button class="btn gmail" onclick="window.open('mailto:decklife92@gmail.com','_blank')">✉️ Gmail</button>
 <button class="btn tiktok" onclick="window.open('https://www.tiktok.com/@decklife92','_blank')">🎵 Tik Tok</button>
 <button class="btn ig" onclick="window.open('https://www.instagram.com/decklife92','_blank')">📷 Instagram</button>
