@@ -68,18 +68,14 @@ function goLocked(type){
   window.location.href = 'kunci.html';
 }
 function goTikTok(){
-  const username = LINKS.tiktok_username;
-  const url = LINKS.tiktok_url;
-  if(navigator.clipboard){navigator.clipboard.writeText(username).catch(()=>{});}
-  showToast('Username disalin: ' + username + ' - Membuka TikTok...');
-  setTimeout(()=>{window.location.href = 'snssdk1233://user/profile/' + username.replace('@','');},200);
-  setTimeout(()=>{window.open(url, '_blank');},800);
+sessionStorage.setItem('decklife_target', 'tiktok');
+window.location.href = 'kunci.html';
 }
-    function goGmail(){
-      const email = "decklife92@gmail.com";
-      if(navigator.clipboard){navigator.clipboard.writeText(email);}
-      showToast('Email disalin: ' + email + ' 📧');
-      setTimeout(()=>{window.location.href = 'mailto:'+email;},500);
+function goGmail(){
+const email = "decklife92@gmail.com";
+if(navigator.clipboard){navigator.clipboard.writeText(email);}
+showToast('Email disalin: ' + email + ' 📧');
+setTimeout(()=>{window.location.href = 'mailto:'+email;},500);
 }
 </script>
 </body>
