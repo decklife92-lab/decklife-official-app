@@ -44,7 +44,7 @@ p.sub{color:rgba(255,255,255,0.75);font-size:14px;margin-bottom:22px;}
   <h1>@decklife</h1>
   <p class="sub">Kreator Visual Sunset & Sunrise</p>
   <button class="btn btn-whatsapp" onclick="goLocked('whatsapp')"><span class="dot"></span> Whatsapp</button>
-  <button class="btn btn-gmail" onclick="goLocked('gmail')">✉️ Gmail</button>
+  <button class="btn btn-gmail" onclick="goGmail()">✉️ Gmail</button>
   <button class="btn btn-tiktok" onclick="goTikTok()">🎵 Tik Tok</button>
   <button class="btn btn-instagram" onclick="goLocked('instagram')">📷 Instagram</button>
   <button class="btn btn-facebook" onclick="goLocked('facebook')">f Facebook</button>
@@ -74,6 +74,12 @@ function goTikTok(){
   showToast('Username disalin: ' + username + ' - Membuka TikTok...');
   setTimeout(()=>{window.location.href = 'snssdk1233://user/profile/' + username.replace('@','');},200);
   setTimeout(()=>{window.open(url, '_blank');},800);
+}
+    function goGmail(){
+      const email = "decklife92@gmail.com";
+      if(navigator.clipboard){navigator.clipboard.writeText(email);}
+      showToast('Email disalin: ' + email + ' 📧');
+      setTimeout(()=>{window.location.href = 'mailto:'+email;},500);
 }
 </script>
 </body>
