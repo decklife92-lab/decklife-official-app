@@ -3,90 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akses Kolaborasi - DECKLIFE</title>
-<style>
-body{
-  margin:0; min-height:100vh;
-  background:#000 url('../bg.jpg') center/cover fixed no-repeat;
-  display:flex; align-items:center; justify-content:center;
-  font-family:sans-serif; padding:20px;
-}
-.box{
-  width:100%; max-width:400px;
-  background:rgba(0,0,0,0.88);
-  border:2px solid #ffcc00;
-  border-radius:28px;
-  padding:26px;
-  text-align:center;
-  color:white;
-  box-shadow:0 10px 30px rgba(0,0,0,0.7);
-}
-h1{color:#ffcc00; font-size:32px; margin:0; letter-spacing:2px;}
-.sub{font-size:14px; opacity:0.9; margin:6px 0;}
-.open{color:#ffcc00; font-weight:bold; margin:10px 0 16px 0; font-size:15px;}
-input{
-  width:100%; box-sizing:border-box;
-  padding:18px; border-radius:16px;
-  border:1.8px solid #ffcc00;
-  background:#111; color:white;
-  font-size:26px; text-align:center;
-  letter-spacing:10px; margin:14px 0;
-}
-button{
-  width:100%; padding:18px; border-radius:16px;
-  border:none; background:#ffcc00;
-  font-weight:bold; font-size:17px;
-  cursor:pointer; color:black;
-}
-#msg{color:#ff3b30; margin-top:12px; min-height:20px; font-size:13px;}
-a{color:#ffcc00; text-decoration:none; font-size:14px; display:block; margin-top:16px;}
-</style>
+<title>Kunci DECKLIFE</title>
+<style>body{margin:0; min-height:100vh; background:#000; color:white; font-family:sans-serif; display:flex; justify-content:center; align-items:center;} .box{background:#111; border:1.8px solid #ffcc00; border-radius:20px; padding:20px; width:90%; max-width:380px; text-align:center;} input{width:90%; padding:14px; border-radius:12px; border:none; margin-top:12px; font-size:18px; text-align:center;} button{width:95%; padding:14px; border-radius:12px; border:none; margin-top:12px; font-weight:bold; background:#ffcc00; cursor:pointer;}</style>
 </head>
 <body>
 <div class="box">
-  <h1>DECKLIFE</h1>
-  <p class="sub">Kreator Visual Sunset & Sunrise Kalimantan</p>
-  <p class="open">✨ Open Collaboration ✨</p>
-
-  <p style="opacity:0.6; font-size:12px; margin:12px 0 4px 0;">Masukkan Kode Akses Kolaborasi</p>
-  
-  <input id="kode" type="password" maxlength="4" placeholder="----" inputmode="numeric">
-
-  <button onclick="cek()">BUKA KUNCI</button>
-
-  <p id="msg"></p>
-
-  <a href="../index.html">← Kembali ke Beranda</a>
-
-  <p style="font-size:10px; opacity:0.35; margin-top:20px;">DECKLIFE - RAJA Sunset Kalimantan Timur</p>
+<h2 style="color:#ffcc00; margin:0;">🔒 DECKLIFE TERKUNCI</h2>
+<p style="font-size:13px; opacity:0.8;">Masukkan kode akses yang diberikan via Gmail</p>
+<input id="kode" type="text" placeholder="Masukkan Kode">
+<button onclick="buka()">BUKA KUNCI</button>
+<p id="msg" style="color:#ff3b30; font-size:13px; margin-top:10px;"></p>
 </div>
-
 <script>
-const LINKS = {
-  whatsapp: "https://wa.me/6281254435553",
-  tiktok: "https://www.tiktok.com/@_decklife_?_r=1&_t=ZS-9AmlOKJ7ZZN",
-  instagram: "https://www.instagram.com/decklife92?mdxt=ZDZ5c2dkaGttZXY5",
-  facebook: "https://www.facebook.com/share/1BxQi2HqyS/"
-};
+function buka(){
+  var k=document.getElementById('kode').value.trim();
+  var t=sessionStorage.getItem('decklife_target') || 'facebook';
+  if(k!=='5759'){ document.getElementById('msg').innerText='Kode Salah! Hubungi Gmail decklife92@gmail.com'; return; }
 
-function cek(){
-  const k = document.getElementById('kode').value.trim();
-  const msg = document.getElementById('msg');
-  if(k === "5795"){
-    const target = sessionStorage.getItem('decklife_target') || 'whatsapp';
-    const url = LINKS[target] || LINKS.whatsapp;
-    msg.style.color = "#25D366";
-    msg.innerText = "Kode benar! Membuka...";
-    setTimeout(()=>{ window.location.href = url; }, 500);
-  } else {
-    msg.style.color = "#ff3b30";
-    msg.innerText = "Kode salah! Minta kode via Gmail";
+  if(t=='whatsapp'){
+    location.href='https://wa.me/6281234567890';
+  } else if(t=='tiktok'){
+    window.open('https://www.tiktok.com/@decklife','_blank');
+    location.href='https://www.tiktok.com/@decklife';
+  } else if(t=='instagram'){
+    window.open('https://www.instagram.com/decklife','_blank');
+    location.href='https://www.instagram.com/decklife';
+  } else if(t=='facebook'){
+    var fb="https://www.facebook.com/share/1BxQi2HqyS/";
+    window.location.href="fb://facewebmodal/f?href="+encodeURIComponent(fb);
+    setTimeout(function(){ window.open(fb,"_blank"); location.href=fb; }, 800);
   }
 }
-
-document.getElementById('kode').addEventListener('keyup', function(e){
-  if(e.key === 'Enter'){ cek(); }
-});
 </script>
 </body>
 </html>
