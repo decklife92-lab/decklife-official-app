@@ -1,17 +1,97 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kunci</title>
-<style>body{margin:0;min-height:100vh;background:#000 url('../bg.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;font-family:sans-serif;padding:20px}.box{width:100%;max-width:380px;background:rgba(0,0,0,0.9);border:2px solid #ffcc00;border-radius:24px;padding:24px;text-align:center;color:white}input{width:100%;padding:16px;border-radius:14px;border:1.5px solid #ffcc00;background:#111;color:white;font-size:22px;text-align:center;letter-spacing:8px;margin:14px 0}button{width:100%;padding:16px;border-radius:14px;border:none;background:#ffcc00;font-weight:bold;font-size:16px;cursor:pointer}</style></head>
-<body><div class="box"><h2>🔒 MASUKKAN KODE</h2><p style="opacity:0.7;font-size:13px">Minta kode via Gmail<br>Kode: 5795</p><input id="kode" maxlength="4" placeholder="----"><button onclick="cek()">BUKA KUNCI</button><p id="msg" style="color:#ff3b30;margin-top:10px"></p><a href="../index.html" style="color:#ffcc00;font-size:13px;display:block;margin-top:16px">← Kembali</a></div>
-<script>
-const LINKS={
- whatsapp:"https://wa.me/6281234567890",
- tiktok:"https://www.tiktok.com/@_decklife_?_r=1&_t=ZS-9AmlOKJ7ZZN",
- instagram:"https://www.instagram.com/decklife92?mdxt=ZDZ5c2dkaGttZXY5",
- facebook:"https://www.facebook.com/share/1BxQi2HqyS/"
-};
-function cek(){
- if(document.getElementById('kode').value==="5795"){
-  const t=sessionStorage.getItem('decklife_target')||'facebook';
-  location.href=LINKS[t];
- } else { document.getElementById('msg').innerText="Kode salah! Minta kode via Gmail"; }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kunci Akses - DECKLIFE</title>
+<style>
+body{
+  margin:0; min-height:100vh;
+  background:#000 url('../bg.jpg') center/cover fixed no-repeat;
+  display:flex; align-items:center; justify-content:center;
+  font-family:sans-serif; padding:20px;
 }
-</script></body></html>
+.box{
+  width:100%; max-width:400px;
+  background:rgba(0,0,0,0.88);
+  border:2px solid #ffcc00;
+  border-radius:28px;
+  padding:26px;
+  text-align:center;
+  color:white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.7);
+}
+h2{margin:0 0 8px 0; font-size:24px;}
+p{margin:6px 0; line-height:1.5;}
+input{
+  width:100%; box-sizing:border-box;
+  padding:18px; border-radius:16px;
+  border:1.8px solid #ffcc00;
+  background:#111; color:white;
+  font-size:26px; text-align:center;
+  letter-spacing:10px; margin:16px 0;
+}
+button{
+  width:100%; padding:18px; border-radius:16px;
+  border:none; background:#ffcc00;
+  font-weight:bold; font-size:17px;
+  cursor:pointer; color:black;
+}
+#msg{color:#ff3b30; margin-top:12px; min-height:20px;}
+a{color:#ffcc00; text-decoration:none; font-size:14px;}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>🔒 MASUKKAN KODE</h2>
+  <p style="opacity:0.7; font-size:13px;">
+    WA, IG, TikTok, FB terkunci.<br>
+    Minta kode via Gmail
+  </p>
+  <p style="font-size:13px; margin-top:4px;">
+    Kode: <b style="color:#ffcc00; font-size:16px;">5795</b>
+  </p>
+
+  <input id="kode" type="text" maxlength="4" placeholder="----" inputmode="numeric">
+
+  <button onclick="cek()">BUKA KUNCI</button>
+
+  <p id="msg"></p>
+
+  <a href="../index.html">← Kembali ke Beranda</a>
+
+  <p style="font-size:11px; opacity:0.4; margin-top:18px;">
+    DECKLIFE - RAJA Sunset Kalimantan Timur
+  </p>
+</div>
+
+<script>
+const LINKS = {
+  whatsapp: "https://wa.me/6281234567890",
+  tiktok: "https://www.tiktok.com/@_decklife_?_r=1&_t=ZS-9AmlOKJ7ZZN",
+  instagram: "https://www.instagram.com/decklife92?mdxt=ZDZ5c2dkaGttZXY5",
+  facebook: "https://www.facebook.com/share/1BxQi2HqyS/"
+};
+
+function cek(){
+  const k = document.getElementById('kode').value.trim();
+  const msg = document.getElementById('msg');
+  if(k === "5795"){
+    const target = sessionStorage.getItem('decklife_target') || 'facebook';
+    const url = LINKS[target] || LINKS.facebook;
+    msg.style.color = "#25D366";
+    msg.innerText = "Kode benar! Membuka...";
+    setTimeout(()=>{ window.location.href = url; }, 600);
+  } else {
+    msg.style.color = "#ff3b30";
+    msg.innerText = "Kode salah! Minta kode via Gmail: decklife92@gmail.com";
+  }
+}
+
+// bisa tekan Enter
+document.getElementById('kode').addEventListener('keyup', function(e){
+  if(e.key === 'Enter'){ cek(); }
+});
+</script>
+</body>
+</html>
