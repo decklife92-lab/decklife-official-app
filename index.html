@@ -3,87 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DECKLIFE - Official</title>
+<title>DECKLIFE Official</title>
 <style>
-body{
-  margin:0; min-height:100vh;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover fixed;
-  display:flex; flex-direction:column; align-items:center; padding:20px;
-  font-family: sans-serif;
-}
-.card{
-  width:100%; max-width:400px;
-  background: rgba(0,0,0,0.65);
-  backdrop-filter: blur(15px);
-  border: 1.5px solid #ffcc00;
-  border-radius:30px; padding:20px; margin-bottom:20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  text-align:center; color:white;
-}
-.logo{ width:90px; height:90px; border-radius:50%; border:3px solid white; margin-bottom:10px; }
-.btn{
-  width:100%; padding:16px; border-radius:18px; border:none;
-  margin-top:12px; font-size:16px; font-weight:bold; cursor:pointer;
-  transition:0.2s;
-}
-.btn:active{transform:scale(0.97);}
-.wa{background:#25D366; color:white;}
-.gmail{background:#ff3b30; color:white;}
-.tiktok{background:#000; color:white;}
-.ig{background: linear-gradient(90deg,#feda75,#fa7e1e,#d62976,#962fbf); color:white;}
-.fb{background:#1877F2; color:white;}
-.yellow{background:#ffeb3b; color:black;}
-.white{background:white; color:black;}
-h1{color:#ffcc00; font-size:26px; margin:0; letter-spacing:2px;}
-a{color:white;}
-#toast{position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:black; color:white; padding:10px 20px; border-radius:20px; display:none; z-index:99;}
+body{margin:0; min-height:100vh; background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1080') center/cover fixed; display:flex; flex-direction:column; align-items:center; padding:20px; font-family:sans-serif;}
+.card{width:100%; max-width:400px; background:rgba(0,0,0,0.7); backdrop-filter:blur(12px); border:1.5px solid #ffcc00; border-radius:28px; padding:20px; margin-bottom:20px; text-align:center; color:white;}
+.logo{width:90px; height:90px; border-radius:50%; border:3px solid white; object-fit:cover;}
+.btn{width:100%; padding:16px; border-radius:16px; border:none; margin-top:10px; font-weight:bold; font-size:16px;}
+.wa{background:#25D366; color:white} .gmail{background:#ff3b30; color:white} .tiktok{background:#000; color:white} .ig{background:linear-gradient(90deg,#feda75,#d62976,#4f5bd5); color:white} .fb{background:#1877F2; color:white}
+h1{color:#ffcc00; font-size:24px; letter-spacing:1px; margin:0;}
 </style>
 </head>
 <body>
 
 <div class="card">
-  <h1>OPEN COLLABORATION</h1>
-  <p style="margin:10px 0;">✨ decklife x brand ✨</p>
-  <p style="font-size:14px; line-height:1.5; opacity:0.9;">
-  Jadikan brand-mu bersinar di langit emas Kalimantan Timur! Terbuka untuk kolaborasi Pariwisata, Hospitality, Properti, dan Brand Lokal yang siap meledak dengan konten original Sunset & Sunrise aesthetic khas Borneo bersama DECKLIFE!
-  </p>
+<h1>OPEN COLLABORATION</h1>
+<p>✨ decklife x brand ✨</p>
+<p style="font-size:13px; opacity:0.9; line-height:1.4;">Jadikan brand-mu bersinar di langit emas Kalimantan Timur! Terbuka untuk kolaborasi Pariwisata, Hospitality, Properti, dan Brand Lokal bersama DECKLIFE!</p>
 </div>
 
 <div class="card">
-  <img src="https://i.imgur.com/8Km9tLL.png" class="logo" onerror="this.src='https://via.placeholder.com/90'">
-  <h2 style="margin:0;">@decklife</h2>
-  <p style="opacity:0.8; font-size:13px; margin:5px 0 15px 0;">Kreator Visual Sunset & Sunrise</p>
-  
-  <div style="background:rgba(0,0,0,0.7); border-radius:20px; padding:15px;">
-    <h3>✨ HUBUNGI ✨</h3>
-    <p style="text-decoration:underline; font-size:18px; word-break:break-all;" onclick="goGmail()">decklife92@gmail.com</p>
-    <p style="font-size:12px; opacity:0.6;">(klik untuk salin)</p>
+<img src="https://i.pravatar.cc/300" class="logo">
+<h2 style="margin:10px 0 0 0;">@decklife</h2>
+<p style="font-size:12px; opacity:0.7;">Kreator Visual Sunset & Sunrise</p>
 
-    <button class="btn wa" onclick="goLocked('whatsapp')">🟢 Whatsapp</button>
-    <button class="btn gmail" onclick="goGmail()">✉️ Gmail - Minta Kode</button>
-    <button class="btn tiktok" onclick="goLocked('tiktok')">🎵 Tik Tok</button>
-    <button class="btn ig" onclick="goLocked('instagram')">📸 Instagram</button>
-    <button class="btn fb" onclick="goLocked('facebook')">f Facebook</button>
-  </div>
+<div style="background:rgba(0,0,0,0.5); border-radius:18px; padding:12px; margin-top:10px;">
+<h3>✨ HUBUNGI ✨</h3>
+<p onclick="goGmail()" style="text-decoration:underline; word-break:break-all;">decklife92@gmail.com</p>
+<p style="font-size:11px; opacity:0.6;">(klik untuk salin)</p>
+
+<button class="btn wa" onclick="goLocked('whatsapp')">🟢 Whatsapp</button>
+<button class="btn gmail" onclick="goGmail()">✉️ Gmail - Minta Kode</button>
+<button class="btn tiktok" onclick="goLocked('tiktok')">🎵 Tik Tok</button>
+<button class="btn ig" onclick="goLocked('instagram')">📸 Instagram</button>
+<button class="btn fb" onclick="goLocked('facebook')">📘 Facebook</button>
+</div>
 </div>
 
-<div id="toast"></div>
-
 <script>
-function showToast(msg){
-  const t=document.getElementById('toast');
-  t.innerText=msg; t.style.display='block';
-  setTimeout(()=>t.style.display='none',2500);
-}
-function goLocked(target){
-  sessionStorage.setItem('decklife_target', target);
-  window.location.href = 'kunci.html';
+function goLocked(t){
+ sessionStorage.setItem('decklife_target', t);
+ // kalau di root tidak ada kunci.html, arahkan ke endorse/kunci.html
+ location.href = 'kunci.html';
 }
 function goGmail(){
-  const email = "decklife92@gmail.com";
-  if(navigator.clipboard){navigator.clipboard.writeText(email);}
-  showToast('Email disalin: ' + email + ' 📧');
-  setTimeout(()=>{window.location.href = 'mailto:'+email;},500);
+ const email="decklife92@gmail.com";
+ navigator.clipboard.writeText(email).catch(()=>{});
+ alert("Email disalin: "+email);
+ location.href="mailto:"+email;
 }
 </script>
 </body>
